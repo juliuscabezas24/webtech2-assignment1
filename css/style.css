@@ -1,0 +1,207 @@
+/* CSS Document */
+
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Defaults */
+html {
+    scroll-behavior: smooth;
+    font-family: "Albert Sans", sans-serif;
+    font-size: 1.3rem;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    margin-top: 0;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 5vh;
+    text-align: center;
+}
+
+p {
+    font-size: 1.3rem;
+    width: 80%;
+    padding-top: 6.5vh;
+    margin: auto;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #b6b6b6;
+    transition: .3s all ease;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+img:hover {
+    transform: scale(1.05);
+    transition: .5s all ease;
+}
+
+/* Main Content */
+
+.wrapper {
+    background-color: rgb(20, 20, 20);
+    color: white;
+}
+
+header {
+    background-image: url(../img/bg.jpg);
+    height: 60vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header h1 {
+    font-size: 5rem;
+    padding-top: 15vh;
+    width: 70%;
+    margin: auto;
+}
+
+nav {
+    padding: 5px;
+    background-image: url(../img/nav-bg.png);
+    border-top: 5px solid #141414;
+    box-shadow: 0 0 10px #1f1f1f;
+}
+
+nav ol {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
+/* Grid One */
+
+.grid-one {
+    margin-top: 5vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1.2rem;
+}
+
+/* Grid Two */
+
+.grid-two {
+    margin-top: 10vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 1.2rem;
+    margin-top: 5vh;
+}
+
+.grid-two-long {
+    grid-column: span 3;
+}
+
+.grid-middle {
+    grid-row: span 3;
+}
+
+/* Footer */
+
+footer {
+    background-color: rgb(15, 15, 15);
+    padding-top: 1vh;
+    padding-bottom: 5vh;
+}
+
+.flex-footer {
+    width: 80%;
+    margin: auto;
+    margin-top: 5vh;
+    display: flex;
+    gap: 1.2rem;
+}
+
+.flex-footer div {
+    flex: 1;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 1200px) {
+
+    header h1 {
+        font-size: 4rem;
+    }
+
+    .grid-one {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 1.2rem;
+    }
+
+    .grid-one-long {
+        grid-column: span 2;
+        height: 30vh;
+    }
+
+    .grid-two {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 1.2rem;
+    }
+
+    .grid-two-long {
+        grid-column: span 2;
+    }
+
+    .grid-middle {
+        grid-row: span 2;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .grid-one {
+        display: block;
+    }
+
+    .grid-one div {
+        margin: 1rem;
+    }
+
+    .grid-two {
+        display: block;
+    }
+
+    .grid-two div {
+        margin: 1rem;
+    }
+
+    .flex-footer {
+        display: block;
+    }
+
+    .flex-footer div {
+        margin: 1rem;
+    }
+}
